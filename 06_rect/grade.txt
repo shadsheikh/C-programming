@@ -1,45 +1,13 @@
-Grading at Wed Jun  3 15:06:49 UTC 2020
+Grading at Wed Jun  3 16:27:46 UTC 2020
 Attempting to compile rectangle.c
 Tring to run rectangle
-Line_2_did_not_match
-Line_3_did_not_match
-Line_4_did_not_match
-Line_6_did_not_match
-Line_7_did_not_match
-Line_8_did_not_match
-Line_9_did_not_match
-Line_10_did_not_match
-Line_11_did_not_match
-Line_12_did_not_match
-Line_13_did_not_match
-Line_14_did_not_match
-Line_15_did_not_match
-Line_16_did_not_match
-Line_17_did_not_match
-Line_18_did_not_match
-Line_19_did_not_match
-Line_20_did_not_match
-Your file did not match the expected ouput
-Your output did not match what we expected. Here is what you printed
-r1 is (2,3) to (7,9)
-r2 is (4,5) to (9,12)
-r3 is (-2,7) to (5,17)
-r4 is (0,7) to (4,9)
-intersection(r1,r1): (2,3) to (7,9)
-intersection(r1,r2): (4,5) to (7,9)
-intersection(r1,r3): (2,7) to (5,9)
-intersection(r1,r4): (2,7) to (4,9)
-intersection(r2,r1): (4,5) to (7,9)
-intersection(r2,r2): (4,5) to (9,12)
-intersection(r2,r3): (4,7) to (5,12)
-intersection(r2,r4): (4,7) to (4,9)
-intersection(r3,r1): (2,7) to (5,9)
-intersection(r3,r2): (4,7) to (5,12)
-intersection(r3,r3): (-2,7) to (5,17)
-intersection(r3,r4): (-2,7) to (4,9)
-intersection(r4,r1): (2,7) to (4,9)
-intersection(r4,r2): (4,7) to (4,9)
-intersection(r4,r3): (-2,7) to (4,9)
-intersection(r4,r4): (0,7) to (4,9)
+Your file matched the expected output
+removing your main() and replacing it with out own to run more tests...
+#################################################
+testcase1:
+testcase1 passed
+#################################################
+testcase2:
+testcase2 passed
 
-Overall Grade: F
+Overall Grade: A
