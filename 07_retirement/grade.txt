@@ -1,4 +1,4 @@
-Grading at Thu Jun  4 03:57:38 UTC 2020
+Grading at Thu Jun  4 04:06:03 UTC 2020
 Attempting to compile retirement.c
 Checking for struct _retire_info
 not found
