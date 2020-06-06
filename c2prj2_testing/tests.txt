@@ -29,5 +29,5 @@ Forum post to solve 15 (pair at front, end of draw)
 Ah Ad Jc 0s 7s 6c 3h; Ah 3c Jc 0s 7s 6c 3h
 
 5+/- 1 card straight (not helpful)
-6c 5c 4s 3s 2s As 0d; 6c 5s 3s 2s As 0d Jc
+6c 5s 4s 3s 2s As 0d; 6c 5s 3s 2s As 0d Jc
 4s 3s 2s As 0d 7d Jc; 4s 3s As 0d 7d Jc 6h
