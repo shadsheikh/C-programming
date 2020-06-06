@@ -26,7 +26,7 @@ Forum post to solve 9 (!straight-flush start counting in middle)
 2s 3s 4s 5h 6s 8s 9h; As 2s 3s 4s 5s 8h 9h
 
 Forum post to solve 15 (pair at front, end of draw)
-Ah Ad Jc 0s 7s 6c 3h; Ah 3c jc 0s 7c 6c 3h
+Ah Ad Jc 0s 7s 6c 3h; Ah 3c Jc 0s 7s 6c 3h
 
 5+/- 1 card straight (not helpful)
 6c 5c 4s 3s 2s As 0d; 6c 5s 3s 2s As 0d Jc
