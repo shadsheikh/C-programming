@@ -32,27 +32,17 @@ const char * ranking_to_string(hand_ranking_t r) {
  
 
   switch (r) {
-  case STRAIGHT_FLUSH:
-    return "STRAIGHT_FLUSH";
-      case FOUR_OF_A_KIND:
-    return " FOUR_OF_A_KIND";
-      case FULL_HOUSE:
-    return " FULL_HOUSE";
-      case FLUSH:
-    return "FLUSH";
-      case STRAIGHT:
-    return "STRAIGHT";
-      case THREE_OF_A_KIND:
-    return " THREE_OF_A_KIND ";
-      case TWO_PAIR:
-    return "TWO_PAIR";
-      case PAIR:
-    return "PAIR";
-      case NOTHING:
-    return "NOTHING";
-      default:
-    return "INVALID";
-  }
+  case STRAIGHT_FLUSH:    return "STRAIGHT_FLUSH";  break;  
+  case FOUR_OF_A_KIND:    return "FOUR_OF_A_KIND";  break;
+  case FULL_HOUSE:        return "FULL_HOUSE";      break;
+  case FLUSH:             return "FLUSH";           break;
+  case STRAIGHT:          return "STRAIGHT";        break;
+  case THREE_OF_A_KIND:   return "THREE_OF_A_KIND ";break;
+  case TWO_PAIR:          return "TWO_PAIR";        break;
+  case PAIR:              return "PAIR";            break;
+  case NOTHING:           return "NOTHING";         break;
+  default:                return "INVALID";        
+   }
 }
 
 char value_letter(card_t c) {
