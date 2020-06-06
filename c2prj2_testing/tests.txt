@@ -19,7 +19,7 @@ Ks Qs Js 0s 9s 3h 2d; As Ks Qs Js 0s 9s 6c
 As Ks Qd Js 0d 5d 4d; As Ks Qd Js 0d 5d 4d
 Qd Jd 0d 9s 9h 8h 8c; Qd Jd 0d 9s 9h 8h 8c
 
-Forum post to solve 1 && 22 (2 pair out of order, 4-card straight?)
+Forum post to solve 1 & 22 (2 pair out of order, 4-card straight?)
 As Ac Kh Qh Jd Js 4s; As 4d Kh Qh Jd Js 4s
 
 Forum post to solve 9 (!straight-flush start counting in middle)
