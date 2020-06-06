@@ -1,0 +1,33 @@
+Hands in manual + flushes of each suit:
+Kh Js 9h 6c 3s 3c 2d; Kh Js 9h 6c 3s 3c 2d
+Kh Kc Ac 8c 7h 5d 3s; Kh Kc Ac 7h 5d 3s 2c
+As Ah Ks Kh 7d 4c 2h; Ac Ad Kh Kc Jd 7d 4c
+Kh Kc Kd Ac 4h 3s 2c; Kh Kc Kd Ac 7h 3s 2c
+Kh Kc Kd Ac 7h 3s 2c; Kh Kc Kd Qd 4s 3s 2c
+Ks Qd Js 0h 9d 5c 2s; Ks Js 9d 5c 2s 7s 3d
+5d 4s 3c 2h Ah Qd 0s; 5d 4s 2h Qd 0s 8d 3h
+Ah Qh 9h 7h 2h 8c 5s; Ah 9h 2h 8c 5s 6c 2d
+As Qs 0s 6s 4s 0h 3d; Qs 6s 4s 0h 3d 4h 8d
+Ad Qd 0d 6d 4d 0h 3d; Qd 6d 4d 0h 3d 4h 8d
+Ac Qc 0c 6c 4c 0h 3d; Qc 6c 4c 0h 3d 4h 8d
+Kc Ks Kh 0c 0s 7d 2s; Kc Qc 4h 0c 0s 7d 2s
+9h 9d 9s Js Jd 0d 3c; 9h 9d jh Js Jd 0d 3c
+0c 0s 0h 0d Qd 6h 2s; 0c 0s 0h 0d 7c 6h 2s
+0c 0s 0h 0d Kc Kd 6s; Kc Kd Kh Ks 0c 0s 2c 
+Ks Qs Js 0s 9s 3h 2d; As Ks Qs Js 0s 9s 6c
+5s 4s 3s 2s Ac 0d 4c; 4c 4s As 0d 5s 3s 2d
+As Ks Qd Js 0d 5d 4d; As Ks Qd Js 0d 5d 4d
+Qd Jd 0d 9s 9h 8h 8c; Qd Jd 0d 9s 9h 8h 8c
+
+Forum post to solve 1 && 22 (2 pair out of order, 4-card straight?)
+As Ac Kh Qh Jd Js 4s; As 4d Kh Qh Jd Js 4s
+
+Forum post to solve 9 (!straight-flush start counting in middle)
+2s 3s 4s 5h 6s 8s 9h; As 2s 3s 4s 5s 8h 9h
+
+Forum post to solve 15 (pair at front, end of draw)
+Ah Ad Jc 0s 7s 6c 3h; Ah 3c jc 0s 7c 6c 3h
+
+5+/- 1 card straight (not helpful)
+6c 5c 4s 3s 2s As 0d; 6c 5s 3s 2s As 0d Jc
+4s 3s 2s As 0d 7d Jc; 4s 3c As 0d 7d Jc 6h
