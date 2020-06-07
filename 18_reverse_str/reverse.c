@@ -4,6 +4,24 @@
 
 void reverse(char * str) {
   //WRITE ME!
+  if(str == NULL){
+    return;
+  }
+
+
+  size_t length = strlen(str);
+
+  char tempstr[length];
+  char * val;
+  for (size_t i = 0; i < length; i++) {
+    val = str + length - 1 -i;
+    tempstr[i] = *val;
+  }
+
+
+  for (size_t i = 0; i < length; i++) {
+    str[i] = tempstr[i];
+  }
 }
 
 int main(void) {
