@@ -1,23 +1,21 @@
-Grading at Sun Jun  7 19:15:30 UTC 2020
+Grading at Sun Jun  7 19:27:31 UTC 2020
 Compiling deck.c
-Compiling cards.c
-Linking cards.o deck.o deck-c4.o and the grader's .o file
-deck-c4.o: In function `make_deck_exclude':
-/home/drew/poker/soln/deck-c4.c:7: multiple definition of `make_deck_exclude'
-deck.o:deck.c:(.text+0x350): first defined here
-deck-c4.o: In function `add_card_to':
-/home/drew/poker/soln/deck-c4.c:26: multiple definition of `add_card_to'
-deck.o:deck.c:(.text+0x290): first defined here
-deck-c4.o: In function `add_empty_card':
-/home/drew/poker/soln/deck-c4.c:36: multiple definition of `add_empty_card'
-deck.o:deck.c:(.text+0x2f0): first defined here
-deck-c4.o: In function `free_deck':
-/home/drew/poker/soln/deck-c4.c:46: multiple definition of `free_deck'
-deck.o:deck.c:(.text+0x610): first defined here
-deck-c4.o: In function `build_remaining_deck':
-/home/drew/poker/soln/deck-c4.c:55: multiple definition of `build_remaining_deck'
-deck.o:deck.c:(.text+0x460): first defined here
-collect2: error: ld returned 1 exit status
-Could not link your code!
+In file included from deck.c:4:0:
+deck.h:1:0: error: unterminated #ifndef
+ #ifndef DECK_H
+ ^
+deck.c: In function ‘build_remaining_deck’:
+deck.c:114:4: error: implicit declaration of function ‘free_deck’ [-Werror=implicit-function-declaration]
+    free_deck(exclusionDeck);
+    ^
+deck.c: At top level:
+deck.c:118:7: error: conflicting types for ‘free_deck’ [-Werror]
+  void free_deck(deck_t * deck) {
+       ^
+deck.c:114:4: note: previous implicit declaration of ‘free_deck’ was here
+    free_deck(exclusionDeck);
+    ^
+cc1: all warnings being treated as errors
+Could not compile your deck.c!
 
 Overall Grade: FAILED
