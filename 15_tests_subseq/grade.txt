@@ -1,7 +1,64 @@
-Grading at Sun Jun  7 10:18:36 UTC 2020
+Grading at Sun Jun  7 10:21:46 UTC 2020
 **Testing broken implementation 10 **
 -------------------------------------
 
-Could not compile test-subseq.c with /usr/local/l2p/subseq/subseq10.o
+failed array 6
 
-Overall Grade: FAILED
+**Testing broken implementation 11 **
+-------------------------------------
+
+failed array 0
+
+**Testing broken implementation 1 **
+-------------------------------------
+
+failed array 4
+
+**Testing broken implementation 2 **
+-------------------------------------
+
+failed array 1
+
+**Testing broken implementation 3 **
+-------------------------------------
+
+failed array 4
+
+**Testing broken implementation 4 **
+-------------------------------------
+
+failed emptyArray
+
+**Testing broken implementation 5 **
+-------------------------------------
+
+failed array 0
+
+**Testing broken implementation 6 **
+-------------------------------------
+
+failed array 3
+
+**Testing broken implementation 7 **
+-------------------------------------
+
+failed array 0
+
+**Testing broken implementation 8 **
+-------------------------------------
+
+failed array 0
+
+**Testing broken implementation 9 **
+-------------------------------------
+
+failed array 1
+
+**Testing correct implementation **
+-------------------------------------
+
+pass
+
+All test programs were handled correctly
+
+Overall Grade: PASSED
