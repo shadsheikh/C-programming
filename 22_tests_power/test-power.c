@@ -13,7 +13,7 @@ int mian(void){
 
   for (int i = 0; i < n; i++) {
     printf("power returned %d, ans is %d\n",power(x[i], y[i]),ans[i]);
-    if (power(x[i], y[i}) != ans[i]) {
+    if (power(x[i], y[i]) != ans[i]) {
       printf("Encountered wrong answer\n");
       exit(EXIT_FAILURE);
     }
