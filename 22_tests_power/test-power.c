@@ -3,21 +3,41 @@
 
 unsigned power(unsigned x, unsigned y);
 
-int mian(void){
-  unsigned x[] =   {0, 1, 2, 2, 2, 2, -2, -2/*,   2,     -2*/};
-  unsigned y[] =   {0, 1, 0, 1, 2, 3,  3,  4/*,  -3      -3*/};
-  unsigned ans[] = {1, 1, 1, 2, 4, 8, -8, 16/*,   0.125, -0.125*/};
+int mian(void) {
+  unsigned ans ;
 
-  size_t n = 8;
+  ans = power(0,0);
+  if (ans !=1) return EXIT_FAILURE;
 
+ans = power(5,0);
+  if (ans !=1) return EXIT_FAILURE;
 
-  for (int i = 0; i < n; i++) {
-    printf("power returned %d, ans is %d\n",power(x[i], y[i]),ans[i]);
-    if (power(x[i], y[i]) != ans[i]) {
-      printf("Encountered wrong answer\n");
-      exit(EXIT_FAILURE);
-    }
-  }
-  printf("correct implementation!\n");
+ans = power(0,5);
+  if (ans !=0) return EXIT_FAILURE;
+
+ans = power(5,2);
+  if (ans !=25) return EXIT_FAILURE;
+
+ans = power(2*3,2);
+  if (ans !=36) return EXIT_FAILURE;
+
+ans = power(5,1);
+  if (ans !=5) return EXIT_FAILURE;
+
+ans = power(2,10);
+  if (ans !=1024) return EXIT_FAILURE;
+
+ans = power(10,2);
+  if (ans !=100) return EXIT_FAILURE;
+
+ans = power(10,5);
+  if (ans !=100000) return EXIT_FAILURE;
+
+ans = power(1,0);
+  if (ans !=1) return EXIT_FAILURE;
+
+ans = power(0,1);
+  if (ans !=0) return EXIT_FAILURE;
+
   return EXIT_SUCCESS;
 }
