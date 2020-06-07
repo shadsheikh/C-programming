@@ -22,7 +22,7 @@ void main(void) {
 
   for(int i = 0; i < n; i++) {
 
-    if (maxSeq(arrays[i],10 != answers[i]) {
+    if (maxSeq(arrays[i],10) != answers[i]) {
 
 	printf("failed array %d\n",i);
 	exit(EXIT_FAILURE);
