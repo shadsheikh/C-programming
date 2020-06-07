@@ -1,7 +1,53 @@
-Grading at Sun Jun  7 15:21:13 UTC 2020
+Grading at Sun Jun  7 16:21:35 UTC 2020
 **Testing broken implementation 10 **
 -------------------------------------
 
-Could not compile test-power.c with /usr/local/l2p/power/power10.o
 
-Overall Grade: FAILED
+**Testing broken implementation 11 **
+-------------------------------------
+
+
+**Testing broken implementation 1 **
+-------------------------------------
+
+
+**Testing broken implementation 2 **
+-------------------------------------
+
+
+**Testing broken implementation 3 **
+-------------------------------------
+
+
+**Testing broken implementation 4 **
+-------------------------------------
+
+
+**Testing broken implementation 5 **
+-------------------------------------
+
+
+**Testing broken implementation 6 **
+-------------------------------------
+
+
+**Testing broken implementation 7 **
+-------------------------------------
+
+
+**Testing broken implementation 8 **
+-------------------------------------
+
+
+**Testing broken implementation 9 **
+-------------------------------------
+
+
+**Testing correct implementation **
+-------------------------------------
+
+
+All tests were ok.
+
+
+Overall Grade: PASSED
