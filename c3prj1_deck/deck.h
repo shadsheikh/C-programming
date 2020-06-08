@@ -19,5 +19,5 @@ void assert_full_deck(deck_t * d) ;
 //card_t * add_empty_card(deck_t * deck);
 void free_deck(deck_t * deck) ;
 //deck_t * build_remaining_deck(deck_t ** hands, size_t n_hands) ;
-#endif
+//#endif
 
