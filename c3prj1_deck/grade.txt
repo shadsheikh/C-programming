@@ -1,17 +1,9 @@
-Grading at Mon Jun  8 04:39:59 UTC 2020
+Grading at Mon Jun  8 04:44:21 UTC 2020
 Compiling deck.c
-deck.c: In function ‘build_remaining_deck’:
-deck.c:114:4: error: implicit declaration of function ‘free_deck’ [-Werror=implicit-function-declaration]
-    free_deck(exclusionDeck);
-    ^
-deck.c: At top level:
-deck.c:118:7: error: conflicting types for ‘free_deck’ [-Werror]
-  void free_deck(deck_t * deck) {
-       ^
-deck.c:114:4: note: previous implicit declaration of ‘free_deck’ was here
-    free_deck(exclusionDeck);
-    ^
-cc1: all warnings being treated as errors
+In file included from deck.c:4:0:
+deck.h:22:2: error: #endif without #if
+ #endif
+  ^
 Could not compile your deck.c!
 
 Overall Grade: FAILED
