@@ -1,9 +1,5 @@
-Grading at Mon Jun  8 04:37:15 UTC 2020
+Grading at Mon Jun  8 04:39:59 UTC 2020
 Compiling deck.c
-In file included from deck.c:4:0:
-deck.h:1:0: error: unterminated #ifndef
- #ifndef DECK_H
- ^
 deck.c: In function ‘build_remaining_deck’:
 deck.c:114:4: error: implicit declaration of function ‘free_deck’ [-Werror=implicit-function-declaration]
     free_deck(exclusionDeck);
