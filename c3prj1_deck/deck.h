@@ -1,4 +1,4 @@
-#ifndef DECK_H
+//#ifndef DECK_H
 #define DECK_H
 #include <stdlib.h>
 #include "cards.h"
