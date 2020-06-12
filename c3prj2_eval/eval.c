@@ -29,11 +29,11 @@ suit_t flush_suit(deck_t * hand) {
   for (size_t i=0 ;i< (hand ->n_cards);i++) {
     card1 = **(card +i);
     switch(card1.suit){
-    case SPADES : {s++; break;}
+   case SPADES : {s++; break;}
    case HEARTS : {h++; break;}
-      case DIAMONDS : {d++; break;}
-	 case CLUBS : {c++; break;}
-	    case NUM_SUITS : break;
+   case DIAMONDS : {d++; break;}
+   case CLUBS : {c++; break;}
+   case NUM_SUITS : break;
 
     }
   }
@@ -58,6 +58,7 @@ size_t get_match_index(unsigned * match_counts, size_t n,unsigned n_of_akind){
   for (size_t i=0;i<n;i++){
     if (match_counts[i] == n_of_akind) return i;
   }
+
   return 0;
 }
 ssize_t  find_secondary_pair(deck_t * hand,
@@ -94,7 +95,8 @@ int is_n_length_straight_at(deck_t * hand, size_t index, suit_t fs, int n){
 	  if (count == n)return 1;
 	  org=hand->cards[i]; }
 	else return 0;}}
-    return 0;
+
+  return 0;
   }
 
   int is_ace_low_straight_at(deck_t * hand, size_t index, suit_t fs){
