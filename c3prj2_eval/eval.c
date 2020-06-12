@@ -5,7 +5,7 @@
 
 int com1(card_t c1,card_t c2){
   if (c1.value == c2.value) return 1;
-else  return 0;
+ return 0;
 }
 
 int card_ptr_comp(const void * vp1, const void * vp2) {
