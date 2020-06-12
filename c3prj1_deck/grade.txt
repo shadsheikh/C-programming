@@ -1,8 +1,17 @@
-Grading at Mon Jun  8 06:06:13 UTC 2020
+Grading at Fri Jun 12 04:38:33 UTC 2020
 Compiling deck.c
-Compiling cards.c
-Linking cards.o deck.o deck-c4.o and the grader's .o file
-gcc: error: deck-c4.o: No such file or directory
-Could not link your code!
+deck.c: In function ‘build_remaining_deck’:
+deck.c:114:4: error: implicit declaration of function ‘free_deck’ [-Werror=implicit-function-declaration]
+    free_deck(exclusionDeck);
+    ^
+deck.c: At top level:
+deck.c:118:7: error: conflicting types for ‘free_deck’ [-Werror]
+  void free_deck(deck_t * deck) {
+       ^
+deck.c:114:4: note: previous implicit declaration of ‘free_deck’ was here
+    free_deck(exclusionDeck);
+    ^
+cc1: all warnings being treated as errors
+Could not compile your deck.c!
 
 Overall Grade: FAILED
