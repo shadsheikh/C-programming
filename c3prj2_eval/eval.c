@@ -29,19 +29,18 @@ suit_t flush_suit(deck_t * hand) {
   for (size_t i=0 ;i< (hand ->n_cards);i++) {
     card1 = **(card +i);
     switch(card1.suit){
-   case SPADES : {s++; break;}
-   case HEARTS : {h++; break;}
+ case CLUBS : {c++; break;}
    case DIAMONDS : {d++; break;}
-   case CLUBS : {c++; break;}
-   case NUM_SUITS : break;
+   case HEARTS : {h++; break;}
+    case SPADES : {s++; break;}
+    case NUM_SUITS : break;
 
     }
   }
-
-  if (s >= 5)return SPADES;
-  if (h >= 5)return HEARTS;
-  if (d >= 5)return DIAMONDS;
   if (c >= 5)return CLUBS;
+  if (d >= 5)return DIAMONDS;
+  if (h >= 5)return HEARTS;
+  if (s >= 5)return SPADES;
   return NUM_SUITS;
     }
 
