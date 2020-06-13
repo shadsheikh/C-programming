@@ -1,4 +1,4 @@
-Grading at Sat Jun 13 04:26:28 UTC 2020
+Grading at Sat Jun 13 04:52:53 UTC 2020
 Compiling your code
 rm -f test poker cards.o my-test-main.o *~
 cc -ggdb3 -Wall -Werror -pedantic -std=gnu99   -c -o deck.o deck.c
