@@ -3,30 +3,30 @@
 #include <assert.h>
 #include "deck.h"
 
-int com (card_t c1,card_t c2) {
-  if ((c1.value == c2.value) && (c1.suit == c2.suit)) return 1;
-  return 0;
-
-}
 
 void print_hand(deck_t * hand){
-  card_t ** card =hand -> cards;
-  card_t card1;
-  for (size_t i=0 ;i<(hand -> n_cards );i++){
-    card1=**(card +i);
-    print_card(card1);
+  for (int i=0 ;i<hand -> n_cards ;i++){
+    print_card(*hand->cards[i]);
+    printf(" ");
   }
 }
 
 int deck_contains(deck_t * d, card_t c) {
-  card_t ** card =d -> cards;
-  for (size_t i=0 ;i< d -> n_cards ;i++) {
-    if (com(**(card+i),c))return 1;
+  for (int i=0 ;i< d -> n_cards ;i++) {
+    if (d->cards[i]->value == c.value && d->cards[i]->suit == c.suit){
+      return 1;
     }
-
+  }
   return 0;
 }
 
+void swap (deck_t * deck ,int c1,int c2){
+  card_t * temp = deck->cards[c1];
+  deck->cards[c1] = deck->cards[c2];
+  deck->cards[c2] = temp;
+}
+
+  
 void shuffle(deck_t * d){
   card_t ** card =d -> cards;
   card_t * temp;
@@ -41,17 +41,8 @@ void shuffle(deck_t * d){
 }
 
 void assert_full_deck(deck_t * d) {
-  card_t ** card =d -> cards;
-  card_t c;
-  int count;
-
-  for (size_t i=0 ;i< d -> n_cards ;i++) {
-    c=**(card+i);
-    count=0;
-    for (size_t j=0 ;j< d -> n_cards ;j++) {
-      if(com(**(card+j), c)) count ++;
-    }
-    assert(count ==1);
+  for (int i=0 ;i<52 ;i++) {
+    assert(deck_contains(d,card_from_num(i)));
   }
 }
 /*
