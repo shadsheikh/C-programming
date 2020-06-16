@@ -1,9 +1,13 @@
 #ifndef CARD_H
+#include <stdbool.h>
 #define CARD_H
 #define VALUE_ACE 14
 #define VALUE_KING 13
 #define VALUE_QUEEN 12
 #define VALUE_JACK 11
+
+#define EMPTY_CARD_VALUE 0
+#define EMPTY_CARD_SUIT 0
 typedef enum {
   SPADES,
   HEARTS,
@@ -35,4 +39,5 @@ char value_letter(card_t c);
 char suit_letter(card_t c) ;
 void print_card(card_t c);
 card_t card_from_letters(char value_let, char suit_let);
+bool is_empty_card(card_t * c);
 #endif
