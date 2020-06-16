@@ -18,59 +18,46 @@ int card_ptr_comp(const void * vp1, const void * vp2) {
 }
 
 suit_t flush_suit(deck_t * hand) {
-  card_t** card= hand -> cards;
-  card_t card1;
-  card1 = **(card +0);
-  int s,h,d,c;
-  s=h=d=c=0;
-
-
-  for (size_t i=0 ;i< (hand ->n_cards);i++) {
-    card1 = **(card +i);
-    switch(card1.suit){
- case CLUBS : {c++; break;}
-   case DIAMONDS : {d++; break;}
-   case HEARTS : {h++; break;}
-    case SPADES : {s++; break;}
-    case NUM_SUITS : break;
-
+  unsigned suit_counts[4] = {0};
+  for(int i=0;i<hand->n_cards;i++) {
+    suit_t suit = hand->cards[i]->suit;
+    suit_counts[suit]++;
+    if(suit_counts[suit] >= 5){
+      return suit;
     }
   }
-  if (c >= 5)return CLUBS;
-  if (d >= 5)return DIAMONDS;
-  if (h >= 5)return HEARTS;
-  if (s >= 5)return SPADES;
-  return NUM_SUITS;
-    }
-
+		return NUM_SUITS;
+    
+}
 unsigned get_largest_element(unsigned * arr, size_t n) {
-  unsigned largest=arr[0];
-  for (size_t i=1 ; i<n ;i++){
-    if (arr[i] > largest) largest=arr[i];
+  unsigned largest=0;
+  for (int i=0 ;i<n ;i++){
+    if (arr[i] > largest){
+      largest = arr[i];
+  }
   }
   return largest;
 }
 
 size_t get_match_index(unsigned * match_counts, size_t n,unsigned n_of_akind){
-
-  for (size_t i=0;i<n;i++){
-    if (match_counts[i] == n_of_akind) return i;
+  int match_index;
+  for (match_index=0;match_index<n;match_index++){
+    if (match_counts[match_index] == n_of_akind){
+      return match_index;
   }
-
-  return 0;
+  }
+  return n;
 }
 ssize_t  find_secondary_pair(deck_t * hand,
 			     unsigned * match_counts,
 			     size_t match_idx) {
-  card_t** card = hand -> cards;
-  card_t card1,card2;
-  card2 = **(card + match_idx);
-  card1 = **(card+0);
-  for (size_t i=0 ;i< (hand ->n_cards);i++){
-    card1=**(card+i);
-    if ((match_counts[i] > 1)&&(card1.value != card2.value))return i;
+  ssize_t index;
+  for (index=0 ;index < hand ->n_cards;index++){
+    if (match_counts[index] > 1 && hand->cards[index]->value != hand->cards[match_idx]->value){
+	return index;
+	}
   }
-
+  
   return -1;
 }
 int is_n_length_straight_at(deck_t * hand, size_t index, suit_t fs, int n){
@@ -125,26 +112,23 @@ hand_eval_t build_hand_from_match(deck_t * hand,
 				  size_t idx) {
 
   hand_eval_t ans;
-  card_t**card = hand -> cards;
-  unsigned count =n;
-
   ans.ranking = what;
 
-  for(size_t i=0 ; i< n ; i++){
-    ans.cards[i] = *(card +idx+i);
+  for(int i=0 ; i< n ; i++){
+    ans.cards[i] = hand->cards[idx+i];
   }
-  if (n < 5){
-    for(size_t i=0 ; i< idx ; i++){
-      ans.cards[i+n] = *(card +i);
-    count ++;
-    if (count == 5 ) break;
-    }
-    if (count < 5){
-      for (size_t i=n+idx ; i < hand -> n_cards+1 ; i++) {
-	ans.cards[count]=*(card +i);
-	count ++;
-	if (count >= 5) break;}
-    }
+  int i = n;
+  int j = 0;
+
+  for(;i<5 && j<idx;i++,j++){
+    ans.cards[i] = hand->cards[j];
+  }
+
+  if (i < 5){
+    j=idx+n;
+    for (; i < 5 ;i++,j++) {
+	ans.cards[i]=hand->cards[j];
+ }
   }
   
   return ans;
@@ -152,20 +136,18 @@ hand_eval_t build_hand_from_match(deck_t * hand,
 
 
 int compare_hands(deck_t * hand1, deck_t * hand2) {
-  qsort(hand1->cards, hand1 -> n_cards, sizeof(card_t *), card_ptr_comp);
-  qsort(hand2->cards, hand2 -> n_cards, sizeof(card_t *), card_ptr_comp);
-  
-  hand_eval_t hand11= evaluate_hand(hand1);
-  hand_eval_t hand22= evaluate_hand(hand2);
-  if (hand11.ranking < hand22.ranking) return 1;
-  else if (hand11.ranking > hand22.ranking) return -1;
-  else {
-    for (size_t i=0 ;i<5;i++){
-      card_t * card1=hand11.cards[i];
-      card_t * card2=hand22.cards[i];
-      if (card1 -> value > card2->value) return 1;
-      else if (card1->value < card2->value) return -1;
-      else continue;
+  qsort(hand1->cards, hand1 -> n_cards, sizeof(hand1->cards[0]), card_ptr_comp);
+  qsort(hand2->cards, hand2 -> n_cards, sizeof(hand2->cards[0]), card_ptr_comp);
+  hand_eval_t e1= evaluate_hand(hand1);
+  hand_eval_t e2= evaluate_hand(hand2);
+
+  if (e1.ranking != e2.ranking){
+  return e2.ranking - e1.ranking;
+  }
+
+  for (int i=0 ;i<5;i++){
+    if (e1.cards[i] -> value != e2.cards[i]->value){
+      return e1.cards[i]->value - e2.cards[i]->value;
 }
   }
 return 0;
