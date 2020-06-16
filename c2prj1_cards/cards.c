@@ -56,10 +56,10 @@ char value_letter(card_t c) {
 
 char suit_letter(card_t c) {
   switch(c.suit){
-  case CLUBS:     return 'c' ;   break;
   case SPADES:    return 's' ;   break;
   case HEARTS:    return 'h' ;   break;
   case DIAMONDS:  return 'd' ;   break;
+  case CLUBS:     return 'c' ;   break;
   default :     return 0;
   }
   return 0;
@@ -94,9 +94,9 @@ card_t card_from_letters(char value_let, char suit_let) {
 
 switch (suit_let) {
    case 's' : temp.suit = SPADES   ; break;
-   case 'c' : temp.suit = CLUBS    ; break;
-   case 'd' : temp.suit = DIAMONDS ; break;
    case 'h' : temp.suit = HEARTS   ; break;
+   case 'd' : temp.suit = DIAMONDS ; break;
+   case 'c' : temp.suit = CLUBS    ; break;
   }
      return temp;
 
@@ -106,15 +106,15 @@ card_t card_from_num(unsigned c) {
   card_t temp;
   
   if(c>=0&&c<=12){
-    temp.suit = HEARTS;
+    temp.suit = SPADES;
   }
 
   else if (c>=13&&c<=25){
-    temp.suit = DIAMONDS;
+    temp.suit = HEARTS;
   }
 
   else if (c>=26&&c<=38){
-    temp.suit = SPADES;
+    temp.suit = DIAMONDS;
   }
 
   else if (c>=39&&c<=51){
