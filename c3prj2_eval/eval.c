@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-
+/*
 int card_ptr_comp(const void * vp1, const void * vp2) {
   const card_t * const * cp1=vp1;
   const card_t * const * cp2=vp2;
@@ -15,6 +15,18 @@ int card_ptr_comp(const void * vp1, const void * vp2) {
   else{
     return 0;
   }
+}
+*/
+
+int card_ptr_comp(const void * vp1, const void * vp2) {
+  const card_t * const * cp1=vp1;
+  const card_t * const * cp2=vp2;
+  int value_diff=(**cp1).value-(**cp2).value;
+  if(value_diff==0)
+    value_diff=(((**cp1).suit-(**cp2).suit));
+  else
+    value_diff=value_diff*-1;
+  return value_diff;
 }
 
 suit_t flush_suit(deck_t * hand) {
