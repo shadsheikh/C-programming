@@ -26,7 +26,7 @@ int card_ptr_comp(const void * vp1, const void * vp2) {
     value_diff=(((**cp1).suit-(**cp2).suit));
   else
     value_diff=value_diff*-1;
-  return value_diff;
+  return value_diff*-1;
 }
 
 suit_t flush_suit(deck_t * hand) {
