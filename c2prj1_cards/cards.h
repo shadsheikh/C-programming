@@ -9,10 +9,10 @@
 #define EMPTY_CARD_VALUE 0
 #define EMPTY_CARD_SUIT 0
 typedef enum {
-  CLUBS,
-  DIAMONDS,
-  HEARTS,
   SPADES,
+  HEARTS,
+  DIAMONDS,
+  CLUBS,
   NUM_SUITS
 } suit_t;
 

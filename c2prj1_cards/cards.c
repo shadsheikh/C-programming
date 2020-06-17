@@ -56,10 +56,10 @@ char value_letter(card_t c) {
 
 char suit_letter(card_t c) {
   switch(c.suit){
+  case CLUBS:     return 'c' ;   break;
   case SPADES:    return 's' ;   break;
   case HEARTS:    return 'h' ;   break;
   case DIAMONDS:  return 'd' ;   break;
-  case CLUBS:     return 'c' ;   break;
   default :     return 0;
   }
   return 0;
@@ -67,9 +67,9 @@ char suit_letter(card_t c) {
   }
 
 void print_card(card_t c) {
- char value  = value_letter( c);
+ char value  = value_letter(c);
   printf("%c" ,value);
- char suit  = suit_letter( c);
+ char suit  = suit_letter(c);
   printf("%c" ,suit);
   
 }
@@ -94,10 +94,10 @@ card_t card_from_letters(char value_let, char suit_let) {
 
 switch (suit_let) {
    case 's' : temp.suit = SPADES   ; break;
-   case 'h' : temp.suit = HEARTS   ; break;
-   case 'd' : temp.suit = DIAMONDS ; break;
    case 'c' : temp.suit = CLUBS    ; break;
-  }
+   case 'd' : temp.suit = DIAMONDS ; break;
+   case 'h' : temp.suit = HEARTS   ; break;
+   }
      return temp;
 
 }
@@ -105,19 +105,19 @@ switch (suit_let) {
 card_t card_from_num(unsigned c) {
   card_t temp;
   
-  if(c>=26&&c<=38){
-    temp.suit = SPADES;
-  }
-
-  else if (c>=0&&c<=12){
+ if (c>=0&&c<=12){
     temp.suit = HEARTS;
   }
 
   else if (c>=13&&c<=25){
     temp.suit = DIAMONDS;
   }
+ 
+ else if(c>=26&&c<=38){
+    temp.suit = SPADES;
+  }
 
-  else if (c>=39&&c<=51){
+ else if (c>=39&&c<=51){
     temp.suit = CLUBS;
   }
   int val = c%13;
