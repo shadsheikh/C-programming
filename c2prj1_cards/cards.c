@@ -105,15 +105,15 @@ switch (suit_let) {
 card_t card_from_num(unsigned c) {
   card_t temp;
   
-  if(c>=0&&c<=12){
+  if(c>=26&&c<=38){
     temp.suit = SPADES;
   }
 
-  else if (c>=13&&c<=25){
+  else if (c>=0&&c<=12){
     temp.suit = HEARTS;
   }
 
-  else if (c>=26&&c<=38){
+  else if (c>=13&&c<=25){
     temp.suit = DIAMONDS;
   }
 
