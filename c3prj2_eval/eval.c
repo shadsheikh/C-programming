@@ -207,7 +207,7 @@ hand_eval_t build_hand_from_match(deck_t * hand,
   return ans;
 }
 
-
+/*
 int compare_hands(deck_t * hand1, deck_t * hand2) {
   qsort(hand1->cards, hand1 -> n_cards, sizeof(hand1->cards[0]), card_ptr_comp);
   qsort(hand2->cards, hand2 -> n_cards, sizeof(hand2->cards[0]), card_ptr_comp);
@@ -225,7 +225,25 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
   }
 return 0;
 }
+*/
+int compare_hands(deck_t * hand1, deck_t * hand2) {
+  qsort(hand1->cards, hand1 -> n_cards, sizeof(hand1->cards[0]), card_ptr_comp);
+  qsort(hand2->cards, hand2 -> n_cards, sizeof(hand2->cards[0]), card_ptr_comp);
+  hand_eval_t hand1_eval = evaluate_hand(hand1);
+  hand_eval_t hand2_eval = evaluate_hand(hand2);
 
+  if (hand1_eval.ranking != hand2_eval.ranking){
+  return hand2_eval.ranking - hand1_eval.ranking;
+  }
+  else{
+  for (size_t i=0 ;i<5;i++){
+    if (hand1_eval.cards[i] -> value != hand2_eval.cards[i]->value){
+      return hand1_eval.cards[i]->value - hand2_eval.cards[i]->value;
+}
+  }
+  }
+return 0;
+}
 
 
 //You will write this function in Course 4.
