@@ -60,6 +60,7 @@ ssize_t  find_secondary_pair(deck_t * hand,
   
   return -1;
 }
+/*
 int is_n_length_straight_at(deck_t * hand, size_t index, suit_t fs, int n){
   int count =1;
   if (fs ==NUM_SUITS ) {
@@ -102,9 +103,81 @@ int is_n_length_straight_at(deck_t * hand, size_t index, suit_t fs, int n){
     if (is_ace_low_straight_at(hand, index,fs)) return -1;
     return is_n_length_straight_at(hand, index, fs, 5);
   }
+*/
+int is_n_length_straight_at(deck_t * hand, size_t index, suit_t fs, int n){
+  int num_in_a_row = 0;
+  unsigned last_value = hand->cards[index]->value+1;
 
+  if(fs != NUM_SUITS && hand->cards[index]->suit !=fs){
+    return 0;
+  }
 
+  for (int i=index;i<hand->n_cards;i++){
+    if(fs == NUM_SUITS){
+      if(hand->cards[i]->value != last_value){
+	if(hand->cards[i]->value == last_value -1){
+	  num_in_a_row++;
+	  if(num_in_a_row >= n){
+	    return 1;
+	  }
+	} else {
+	  return 0;
+	}
+	last_value = hand->cards[i]->value;
+      }
+    }else if(hand->cards[i]->suit==fs){
+      if(hand->cards[i]->value == last_value -1){
+      num_in_a_row++;
+      if(num_in_a_row >= n){
+	return 1;
+      }
+    }
+      else{
+      return 0;
+    }
+    last_value = hand->cards[i]->value;
+  }
+}
+return 0;
+}
 
+  
+int is_ace_low_straight_at(deck_t * hand, size_t index, suit_t fs,int n){
+  assert(hand->cards[index]->value == VALUE_ACE && (fs == NUM_SUITS || hand->cards[index]->suit == fs));
+  int i = index + 1;
+
+  while(hand->cards[i]->value !=5 || !(fs==NUM_SUITS || hand->cards[i]->suit ==fs)){
+    i++;
+    if(i>hand->n_cards - 4){
+      return 0;
+    }
+  }
+  if(is_n_length_straight_at(hand,i,fs,4)){
+    return -1;
+  }
+  return 0;
+}
+
+  int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
+    if(hand->n_cards - index <5){
+      return 0;
+    }
+
+    if (is_n_length_straight_at(hand,index,fs,5) == 1){
+  return 1;
+    }
+    int possible_index = -1;
+    for(int i=index;hand->cards[i]->value == VALUE_ACE && i<hand->n_cards -4;i++){
+      if(fs == NUM_SUITS || hand->cards[i]->suit == fs){
+	possible_index = i;
+           break;
+  }
+}
+    if(possible_index >= 0){
+      return is_ace_low_straight_at(hand,possible_index,fs,4);
+    }
+    return 0;
+  }
 
 hand_eval_t build_hand_from_match(deck_t * hand,
 				  unsigned n,
