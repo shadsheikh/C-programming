@@ -2,10 +2,10 @@
 #include <stdio.h>
 #include <ctype.h>
 
-void frequencyOfChars(FILE * file,int frequencies[]{
+void frequencyOfChars(FILE * file,int frequencies[]){
     int currChar;
     while((currChar = fgetc(file)) != EOF){
-      if(isalph(currChar)){
+      if(isalpha(currChar)){
 	currChar = tolower(currChar);
 	currChar -= 'a';
 	frequencies[currChar]++;
