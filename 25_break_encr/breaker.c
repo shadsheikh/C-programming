@@ -23,7 +23,7 @@ void frequencyOfChars(FILE * file,int frequencies[]){
 
     int key = 0;
 
-    if(maxIdx >= ('e' - 'e')){
+    if(maxIdx >= ('e' - 'a')){
       key = maxIdx - ('e'-'a');
     }
     else {
