@@ -45,7 +45,7 @@ void assert_full_deck(deck_t * d) {
     assert(deck_contains(d,card_from_num(i)));
   }
 }
-/*
+
 void add_card_to(deck_t * deck,card_t c) {
 
   card_t* c1=malloc(sizeof(*c1));
@@ -121,4 +121,4 @@ void free_deck(deck_t * deck) {
   free(deck);
 
 }
-*/
+
