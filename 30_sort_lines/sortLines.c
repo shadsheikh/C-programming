@@ -58,7 +58,7 @@ int main(int argc, char ** argv) {
 	line=NULL;
 	i++;
       }
-      free(line)
+      free(line);
 	sortData(arr,i);
       for(int j=0;j<i;j++){
 	printf("%s",arr[j]);
