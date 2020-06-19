@@ -1,0 +1,20 @@
+Grading at Fri Jun 19 15:22:29 UTC 2020
+Attempting to compile minesweeper.c
+minesweeper.c: In function ‘makeBoard’:
+minesweeper.c:51:5: error: ‘currr’ undeclared (first use in this function)
+     currr = malloc(w*sizeof(*curr));
+     ^
+minesweeper.c:51:5: note: each undeclared identifier is reported only once for each function it appears in
+minesweeper.c: At top level:
+minesweeper.c:65:3: error: expected identifier or ‘(’ before ‘return’
+   return NULL;
+   ^
+minesweeper.c:66:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+minesweeper.c:208:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+The code did not compile!
+
+Overall Grade: F
