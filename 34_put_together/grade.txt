@@ -1,0 +1,20 @@
+Grading at Fri Jun 19 17:23:41 UTC 2020
+Attempting to compile:
+rm -f  outname.o  counts.o  main.o  kv.o count_values *~
+gcc -c -Wall -Werror -std=gnu99 -pedantic -ggdb3 outname.c
+gcc -c -Wall -Werror -std=gnu99 -pedantic -ggdb3 counts.c
+gcc -c -Wall -Werror -std=gnu99 -pedantic -ggdb3 main.c
+main.c: In function ‘main’:
+main.c:42:21: error: implicit declaration of function ‘computerOutputFileName’ [-Werror=implicit-function-declaration]
+     char *outName = computerOutputFileName(argv[i]);
+                     ^
+main.c:42:21: error: initialization makes pointer from integer without a cast [-Werror=int-conversion]
+main.c:54:3: error: implicit declaration of function ‘freeVs’ [-Werror=implicit-function-declaration]
+   freeVs(kv);
+   ^
+cc1: all warnings being treated as errors
+Makefile:10: recipe for target 'main.o' failed
+make: *** [main.o] Error 1
+The code did not compile! Please try git add . to push all files in your working directory 
+
+Overall Grade: F
