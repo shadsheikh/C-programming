@@ -75,5 +75,5 @@ char * lookupValue(kvarray_t * pairs, const char * key) {
     curr_pair=pairs->arr[i];
     if(! strcmp(curr_pair->key,key)) return curr_pair->value;
   }
-  return NULL:
+  return NULL;
 }
