@@ -59,7 +59,7 @@ int main(int argc , char** argv){
   if (!(checkinput(f))) return EXIT_FAILURE;
 
   if (fclose(f) != 0) {
-    perror("Failed to close the input file");
+    perror("Failed to close the input file!");
     return EXIT_FAILURE; }
   f = fopen(argv[1],"r");
   if (f == NULL){
@@ -78,7 +78,7 @@ int main(int argc , char** argv){
 
   rotate(matrix);
 
-  for (int x=0;x<0;x++){
+  for (int x=0;x<10;x++){
     for (int y=0;y<10;y++){
       printf("%c",matrix[x][y]);
     }
