@@ -1,0 +1,13 @@
+Grading at Fri Jun 19 17:42:27 UTC 2020
+Compiling deck.c -> deck.o
+Compiling eval.c -> eval.o
+Compiling cards.c -> cards.o
+Linking eval.o, deck.o, cards.o, and our tester
+tester.o: In function `check_get_match_count':
+c4p1-tester.c:(.text+0x9b6): undefined reference to `get_match_counts'
+eval.o: In function `evaluate_hand':
+eval.c:(.text+0xc02): undefined reference to `get_match_counts'
+collect2: error: ld returned 1 exit status
+Linking failed
+
+Overall Grade: F
