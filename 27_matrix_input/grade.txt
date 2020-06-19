@@ -1,7 +1,13 @@
-Grading at Fri Jun 19 09:45:09 UTC 2020
+Grading at Fri Jun 19 09:46:23 UTC 2020
 Attempting to compile rotateMatrix.c
-rotateMatrix.c:1:20: fatal error: stddio.h: No such file or directory
-compilation terminated.
+rotateMatrix.c: In function ‘rotate’:
+rotateMatrix.c:35:2: error: expected ‘;’ before ‘matrix’
+  matrix[j][i]=temp;
+  ^
+rotateMatrix.c:33:12: error: unused variable ‘temp’ [-Werror=unused-variable]
+       char temp =matrix[i][j];
+            ^
+cc1: all warnings being treated as errors
 The code did not compile!
 
 Overall Grade: F
