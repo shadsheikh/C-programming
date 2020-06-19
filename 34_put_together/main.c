@@ -39,7 +39,7 @@ int main(int argc, char ** argv) {
     counts_t * c=countFile(argv[i],kv);
     if(c == NULL) return EXIT_FAILURE;
     //compute the output file name from argv[i] (call this outName)
-    char *outName = computerOutputFileName(argv[i]);
+    char *outName = computeOutputFileName(argv[i]);
 
     //open the file named by outName (call that f)
     FILE* f1=fopen(outName,"w");
