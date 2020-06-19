@@ -19,7 +19,7 @@ kvpair_t* splitPairs(char* str){
 		  
 kvarray_t * readKVs(const char * fname) {
   FILE * f = fopen(fname, "r");
-  if )=(f == NULL){
+  if (f == NULL){
   perror("could not open file");
   return NULL;
 }
@@ -43,7 +43,7 @@ free(line);
 
 int result=fclose(f);
 if (result !=0)return NULL;
-return kv_arraay;
+return kv_array;
   //WRITE ME
 }
 
