@@ -1,9 +1,8 @@
 0_input.txt
-1_input.txt
 2_input.txt
 3_input.txt
 4_input.txt
-5_input.txt
+1_input.txt
 
 fake.input
 empty input2.txt
