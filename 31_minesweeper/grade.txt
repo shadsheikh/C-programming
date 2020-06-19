@@ -1,14 +1,24 @@
-Grading at Fri Jun 19 15:26:32 UTC 2020
+Grading at Fri Jun 19 15:29:22 UTC 2020
 Attempting to compile minesweeper.c
-minesweeper.c:65:3: error: expected identifier or ‘(’ before ‘return’
-   return NULL;
-   ^
-minesweeper.c:66:1: error: expected identifier or ‘(’ before ‘}’ token
- }
- ^
-minesweeper.c:208:1: error: expected identifier or ‘(’ before ‘}’ token
- }
- ^
-The code did not compile!
+#################################################
+testcase1:
+Your output is correct
+  - Valgrind was clean (no errors, no memory leaks)
+valgrind was clean
+#################################################
+testcase2:
+Your output is correct
+  - Valgrind was clean (no errors, no memory leaks)
+valgrind was clean
+#################################################
+testcase3:
+Your output is correct
+  - Valgrind was clean (no errors, no memory leaks)
+valgrind was clean
+#################################################
+testcase4:
+Your output is correct
+  - Valgrind was clean (no errors, no memory leaks)
+valgrind was clean
 
-Overall Grade: F
+Overall Grade: A
