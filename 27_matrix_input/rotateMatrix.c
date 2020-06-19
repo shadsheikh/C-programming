@@ -88,5 +88,6 @@ int main(int argc , char** argv){
   if (fclose(f) != 0) {
     perror("Failed to close the input file");
     return EXIT_FAILURE; }
+
   return EXIT_SUCCESS;
 }
