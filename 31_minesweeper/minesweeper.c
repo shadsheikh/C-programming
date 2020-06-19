@@ -60,10 +60,6 @@ board_t * makeBoard(int w, int h, int numMines) {
   return b;
 }
 
-
-  //WRITE ME!
-  return NULL;
-}
 void printBoard(board_t * b) {    
   int found = 0;
   printf("    ");
@@ -205,7 +201,7 @@ void freeBoard(board_t * b) {
   free(b);
 }
   //WRITE ME!
-}
+
 
 int readInt(char ** linep, size_t * lineszp) {
   if (getline (linep, lineszp, stdin) == -1) {
