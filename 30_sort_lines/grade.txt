@@ -1,9 +1,24 @@
-Grading at Fri Jun 19 14:43:34 UTC 2020
+Grading at Fri Jun 19 14:45:21 UTC 2020
 Attempting to compile sortLines.c
-sortLines.c: In function ‘main’:
-sortLines.c:62:2: error: expected ‘;’ before ‘sortData’
-  sortData(arr,i);
-  ^
-The code did not compile!
+#################################################
+testcase1:
+testcase1 passed, your program successfully indicated a failure
+  - Valgrind was clean (no errors, no memory leaks)
+valgrind was clean
+#################################################
+testcase2:
+Your output is correct
+  - Valgrind was clean (no errors, no memory leaks)
+valgrind was clean
+#################################################
+testcase3:
+Your output is correct
+  - Valgrind was clean (no errors, no memory leaks)
+valgrind was clean
+#################################################
+testcase4:
+Your output is correct
+  - Valgrind was clean (no errors, no memory leaks)
+valgrind was clean
 
-Overall Grade: F
+Overall Grade: A
