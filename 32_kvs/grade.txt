@@ -1,31 +1,9 @@
-Grading at Fri Jun 19 16:32:02 UTC 2020
+Grading at Fri Jun 19 16:39:19 UTC 2020
 Attempting to compile:
-kv.c: In function ‘readKVs’:
-kv.c:22:6: error: expected ‘(’ before ‘)’ token
-   if )=(f == NULL){
-      ^
-kv.c:22:7: error: expected expression before ‘=’ token
-   if )=(f == NULL){
-       ^
-kv.c:22:19: error: expected ‘;’ before ‘{’ token
-   if )=(f == NULL){
-                   ^
-kv.c:35:17: error: ‘line’ undeclared (first use in this function)
- while (getline(&line,&sz,f) >= 0) {
-                 ^
-kv.c:35:17: note: each undeclared identifier is reported only once for each function it appears in
-kv.c:46:8: error: ‘kv_arraay’ undeclared (first use in this function)
- return kv_arraay;
-        ^
 kv.c: In function ‘lookupValue’:
 kv.c:78:14: error: expected ‘;’ before ‘:’ token
    return NULL:
               ^
-kv.c: In function ‘readKVs’:
-kv.c:48:1: error: control reaches end of non-void function [-Werror=return-type]
- }
- ^
-cc1: all warnings being treated as errors
 The code did not compile!
 
 Overall Grade: F
