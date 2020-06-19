@@ -48,7 +48,7 @@ board_t * makeBoard(int w, int h, int numMines) {
   b->board=malloc(h*(sizeof(*(b->board))));
   int * curr = NULL;
   for (int y=0;y<h;y++){
-    currr = malloc(w*sizeof(*curr));
+    curr = malloc(w*sizeof(*curr));
     for(int x=0 ;x<h;x++){
       curr[x]=UNKNOWN;
     }
