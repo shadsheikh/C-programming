@@ -1,19 +1,12 @@
-Grading at Sat Jun 20 18:20:53 UTC 2020
+Grading at Sat Jun 20 18:24:56 UTC 2020
 Compiling cards.c -> cards.o
 Compiling deck.c -> deck.o
 Compiling input.c -> input.o
 Compiling future.c -> future.o
-future.c: In function ‘future_cards_from_deck’:
-future.c:33:7: error: ‘comtinue’ undeclared (first use in this function)
-       comtinue;
-       ^
-future.c:33:7: note: each undeclared identifier is reported only once for each function it appears in
-future.c:36:12: error: ‘future_cards_t {aka struct future_cards_tag}’ has no member named ‘deck’
-       (*(fc->deck[i].cards[j])).value = (*(deck->cards[i])).value;
-            ^
-future.c:37:12: error: ‘future_cards_t {aka struct future_cards_tag}’ has no member named ‘deck’
-       (*(fc->deck[i].cards[j])).suit = (*(deck->cards[i])).suit;
-            ^
-Compilation of future.c failed
+Linking input.o, future.o deck.o, cards.o, and our tester
+input.o: In function `hand_from_string':
+input.c:(.text+0x191): undefined reference to `add_future_card'
+collect2: error: ld returned 1 exit status
+Linking failed
 
 Overall Grade: F
