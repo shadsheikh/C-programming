@@ -1,14 +1,11 @@
-Grading at Sat Jun 20 17:09:20 UTC 2020
+Grading at Sat Jun 20 17:13:53 UTC 2020
 Compiling deck.c -> deck.o
 Compiling eval.c -> eval.o
-eval.c: In function ‘get_match_counts’:
-eval.c:277:22: error: ‘hand_’ undeclared (first use in this function)
-   if(hand == NULL || hand_>n_cards == 0){
-                      ^
-eval.c:277:22: note: each undeclared identifier is reported only once for each function it appears in
-eval.c:277:28: error: ‘n_cards’ undeclared (first use in this function)
-   if(hand == NULL || hand_>n_cards == 0){
-                            ^
+eval.c: In function ‘get_match_count’:
+eval.c:267:7: error: ‘i’ is used uninitialized in this function [-Werror=uninitialized]
+   int i = ifrom+i;
+       ^
+cc1: all warnings being treated as errors
 Compilation of eval.c failed
 
 Overall Grade: F
