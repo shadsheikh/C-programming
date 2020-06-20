@@ -1,0 +1,14 @@
+Grading at Sat Jun 20 18:17:41 UTC 2020
+Compiling cards.c -> cards.o
+Compiling deck.c -> deck.o
+Compiling input.c -> input.o
+input.c: In function ‘hand_from_string’:
+input.c:12:19: error: implicit declaration of function ‘strlen’ [-Werror=implicit-function-declaration]
+   for(int i = 0;i<strlen(str);i++){
+                   ^
+input.c:12:19: error: incompatible implicit declaration of built-in function ‘strlen’ [-Werror]
+input.c:12:19: note: include ‘<string.h>’ or provide a declaration of ‘strlen’
+cc1: all warnings being treated as errors
+Compilation of input.c failed
+
+Overall Grade: F
