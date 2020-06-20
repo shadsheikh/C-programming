@@ -65,7 +65,7 @@ card_t * add_empty_card(deck_t * deck){
 
   assert(deck != NULL);
   
-  card_t* empty_card = malloc(sizeof(*empty_cards));
+  card_t* empty_card = malloc(sizeof(*empty_card));
 
   empty_card->value = 0;
   empty_card->suit = 0;
@@ -84,7 +84,7 @@ deck_t * make_deck_exclude(deck_t * excluded_cards){
 
   for(int i=0;i<52;i++){
 
-    card_t c= card_from_num(i);
+    card = card_from_num(i);
 
     if(!deck_contains(excluded_cards,card)){
       add_card_to (answer,card);
@@ -104,7 +104,7 @@ deck_t * build_remaining_deck(deck_t ** hands, size_t n_hands) {
   for (int i=0 ; i<n_hands ;i++) {
 
     for(int j=0 ;j<hands[i]->n_cards ;j++) {
-      if(!is_empty_card(hands[i]->cards[j]){
+      if(!is_empty_card(hands[i]->cards[j])){
 	  add_card_to(&temp,*hands[i]->cards[j]);
 	}
 	}
