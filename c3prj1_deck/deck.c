@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <assert.h>
 #include "deck.h"
-#include "eval.c"
+#include "eval.h"
 #include "cards.h"
 
 void print_hand(deck_t * hand){

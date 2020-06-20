@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-/*
+
 int card_ptr_comp(const void * vp1, const void * vp2) {
   const card_t * const * cp1=vp1;
   const card_t * const * cp2=vp2;
@@ -16,8 +16,8 @@ int card_ptr_comp(const void * vp1, const void * vp2) {
     return 0;
   }
 }
-*/
 
+/*
 int card_ptr_comp(const void * vp1, const void * vp2) {
   const card_t * const * cp1=vp1;
   const card_t * const * cp2=vp2;
@@ -28,7 +28,7 @@ int card_ptr_comp(const void * vp1, const void * vp2) {
     value_diff=value_diff;
   return value_diff*-1;
 }
-
+*/
 suit_t flush_suit(deck_t * hand) {
   unsigned suit_counts[4] = {0};
   for(int i=0;i<hand->n_cards;i++) {
@@ -72,7 +72,7 @@ ssize_t  find_secondary_pair(deck_t * hand,
   
   return -1;
 }
-/*
+
 int is_n_length_straight_at(deck_t * hand, size_t index, suit_t fs, int n){
   int count =1;
   if (fs ==NUM_SUITS ) {
@@ -115,7 +115,7 @@ int is_n_length_straight_at(deck_t * hand, size_t index, suit_t fs, int n){
     if (is_ace_low_straight_at(hand, index,fs)) return -1;
     return is_n_length_straight_at(hand, index, fs, 5);
   }
-*/
+/*
 int is_n_length_straight_at(deck_t * hand, size_t index, suit_t fs, int n){
   int num_in_a_row = 0;
   unsigned last_value = hand->cards[index]->value+1;
@@ -190,7 +190,7 @@ int is_ace_low_straight_at(deck_t * hand, size_t index, suit_t fs,int n){
     }
     return 0;
   }
-
+*/
 hand_eval_t build_hand_from_match(deck_t * hand,
 				  unsigned n,
 				  hand_ranking_t what,
@@ -219,7 +219,7 @@ hand_eval_t build_hand_from_match(deck_t * hand,
   return ans;
 }
 
-/*
+
 int compare_hands(deck_t * hand1, deck_t * hand2) {
   qsort(hand1->cards, hand1 -> n_cards, sizeof(hand1->cards[0]), card_ptr_comp);
   qsort(hand2->cards, hand2 -> n_cards, sizeof(hand2->cards[0]), card_ptr_comp);
@@ -237,7 +237,7 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
   }
 return 0;
 }
-*/
+/*
 int compare_hands(deck_t * hand1, deck_t * hand2) {
   qsort(hand1->cards, hand1 -> n_cards, sizeof(hand1->cards[0]), card_ptr_comp);
   qsort(hand2->cards, hand2 -> n_cards, sizeof(hand2->cards[0]), card_ptr_comp);
@@ -256,15 +256,49 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
   }
 return 0;
 }
-
+*/
 
 //You will write this function in Course 4.
 //For now, we leave a prototype (and provide our
 //implementation in eval-c4.o) so that the
 //other functions we have provided can make
 //use of get_match_counts.
-unsigned * get_match_counts(deck_t * hand) ;
+int get_match_count(unsigned * values, size_t nvalues, int ifrom){
+  int i = ifrom+i;
+  int count = 1;
 
+  while (i<nvalues && values[i] == values[ifrom]){
+    count++;
+    i++;
+  }
+  return count;
+}
+unsigned * get_match_counts(deck_t * hand) {
+  if(hand == NULL || hand_>n_cards == 0){
+    return NULL;
+  }
+
+  unsigned * counts = malloc(hand->n_cards * sizeof(*counts));
+
+    unsigned * values = malloc(hand->n_cards * sizeof(*counts));
+
+    for(int i=0;i<hand->n_cards;i++){
+      values[i] = hand->cards[i]->value;
+    }
+
+    int i=0;
+    int count =0;
+    while(i<hand->n_cards){
+      count = get_match_count(values,hand->n_cards,i);
+      for(int j=0;j<count;j++){
+	counts[i+j] = count;
+      }
+      i += count;
+    }
+
+    free(values);
+    return counts;
+}
 // We provide the below functions.  You do NOT need to modify them
 // In fact, you should not modify them!
 
