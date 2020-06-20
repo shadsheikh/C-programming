@@ -274,7 +274,7 @@ int get_match_count(unsigned * values, size_t nvalues, int ifrom){
   return count;
 }
 unsigned * get_match_counts(deck_t * hand) {
-  if(hand == NULL || hand_>n_cards == 0){
+  if(hand == NULL || hand->n_cards == 0){
     return NULL;
   }
 
