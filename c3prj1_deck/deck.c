@@ -96,6 +96,16 @@ deck_t * make_deck_exclude(deck_t * excluded_cards){
 
 }
 
+ void free_cards(deck_t * deck){
+    for(int i=0;i<deck->n_cards;i++){
+      free(deck->cards[i]);
+    }
+    free(deck->cards);
+    deck->n_cards = 0;
+    deck->cards=NULL;
+  }
+ 
+
 deck_t * build_remaining_deck(deck_t ** hands, size_t n_hands) {
   deck_t temp;
   temp.cards = NULL;
@@ -107,8 +117,8 @@ deck_t * build_remaining_deck(deck_t ** hands, size_t n_hands) {
       if(!is_empty_card(hands[i]->cards[j])){
 	  add_card_to(&temp,*hands[i]->cards[j]);
 	}
-	}
-  }
+       }
+      }
 
   deck_t* answer = make_deck_exclude(&temp);
  
@@ -116,16 +126,7 @@ deck_t * build_remaining_deck(deck_t ** hands, size_t n_hands) {
   return answer;
 
 }
-
-  void free_cards(deck_t * deck){
-    for(int i=0;i<deck->n_cards;i++){
-      free(deck->cards[i]);
-    }
-    free(deck->cards);
-    deck->n_cards = 0;
-    deck->cards=NULL;
-  }
-  
+ 
 void free_deck(deck_t * deck) {
     free_cards(deck);
    free(deck);
