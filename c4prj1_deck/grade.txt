@@ -1,21 +1,6 @@
-Grading at Sat Jun 20 08:57:11 UTC 2020
+Grading at Sat Jun 20 09:33:49 UTC 2020
 Compiling deck.c -> deck.o
-deck.c: In function ‘add_empty_card’:
-deck.c:68:39: error: ‘empty_cards’ undeclared (first use in this function)
-   card_t* empty_card = malloc(sizeof(*empty_cards));
-                                       ^
-deck.c:68:39: note: each undeclared identifier is reported only once for each function it appears in
-deck.c: In function ‘make_deck_exclude’:
-deck.c:87:12: error: unused variable ‘c’ [-Werror=unused-variable]
-     card_t c= card_from_num(i);
-            ^
 deck.c: In function ‘build_remaining_deck’:
-deck.c:107:44: error: expected ‘)’ before ‘{’ token
-       if(!is_empty_card(hands[i]->cards[j]){
-                                            ^
-deck.c:110:2: error: expected expression before ‘}’ token
-  }
-  ^
 deck.c:115:3: error: implicit declaration of function ‘free_cards’ [-Werror=implicit-function-declaration]
    free_cards(&temp);
    ^
