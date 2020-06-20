@@ -1,17 +1,54 @@
-Grading at Sat Jun 20 09:33:49 UTC 2020
+Grading at Sat Jun 20 09:38:02 UTC 2020
 Compiling deck.c -> deck.o
-deck.c: In function ‘build_remaining_deck’:
-deck.c:115:3: error: implicit declaration of function ‘free_cards’ [-Werror=implicit-function-declaration]
-   free_cards(&temp);
-   ^
-deck.c: At top level:
-deck.c:120:8: error: conflicting types for ‘free_cards’ [-Werror]
-   void free_cards(deck_t * deck){
-        ^
-deck.c:115:3: note: previous implicit declaration of ‘free_cards’ was here
-   free_cards(&temp);
-   ^
-cc1: all warnings being treated as errors
-Compilation of deck.c failed
+Compiling eval.c -> eval.o
+Compiling cards.c -> cards.o
+Linking eval.o, deck.o, cards.o, and our tester
+deck.o: In function `card_ptr_comp':
+deck.c:(.text+0x0): multiple definition of `card_ptr_comp'
+eval.o:eval.c:(.text+0x0): first defined here
+deck.o: In function `flush_suit':
+deck.c:(.text+0x5d): multiple definition of `flush_suit'
+eval.o:eval.c:(.text+0x5d): first defined here
+deck.o: In function `get_largest_element':
+deck.c:(.text+0x102): multiple definition of `get_largest_element'
+eval.o:eval.c:(.text+0x102): first defined here
+deck.o: In function `get_match_index':
+deck.c:(.text+0x166): multiple definition of `get_match_index'
+eval.o:eval.c:(.text+0x166): first defined here
+deck.o: In function `find_secondary_pair':
+deck.c:(.text+0x1b5): multiple definition of `find_secondary_pair'
+eval.o:eval.c:(.text+0x1b5): first defined here
+deck.o: In function `is_n_length_straight_at':
+deck.c:(.text+0x240): multiple definition of `is_n_length_straight_at'
+eval.o:eval.c:(.text+0x240): first defined here
+deck.o: In function `is_ace_low_straight_at':
+deck.c:(.text+0x3d6): multiple definition of `is_ace_low_straight_at'
+eval.o:eval.c:(.text+0x3d6): first defined here
+deck.o: In function `is_straight_at':
+deck.c:(.text+0x4e1): multiple definition of `is_straight_at'
+eval.o:eval.c:(.text+0x4e1): first defined here
+deck.o: In function `build_hand_from_match':
+deck.c:(.text+0x5d6): multiple definition of `build_hand_from_match'
+eval.o:eval.c:(.text+0x5d6): first defined here
+deck.o: In function `compare_hands':
+deck.c:(.text+0x71d): multiple definition of `compare_hands'
+eval.o:eval.c:(.text+0x71d): first defined here
+deck.o: In function `evaluate_hand':
+deck.c:(.text+0xb6b): multiple definition of `evaluate_hand'
+eval.o:eval.c:(.text+0xb6b): first defined here
+deck.o: In function `copy_straight':
+deck.c:(.text+0x83c): multiple definition of `copy_straight'
+eval.o:eval.c:(.text+0x83c): first defined here
+deck.o: In function `find_straight':
+deck.c:(.text+0x9ab): multiple definition of `find_straight'
+eval.o:eval.c:(.text+0x9ab): first defined here
+tester.o: In function `check_get_match_count':
+c4p1-tester.c:(.text+0x9b6): undefined reference to `get_match_counts'
+eval.o: In function `evaluate_hand':
+eval.c:(.text+0xc02): undefined reference to `get_match_counts'
+deck.o: In function `evaluate_hand':
+deck.c:(.text+0xc02): undefined reference to `get_match_counts'
+collect2: error: ld returned 1 exit status
+Linking failed
 
 Overall Grade: F
