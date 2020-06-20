@@ -264,7 +264,7 @@ return 0;
 //other functions we have provided can make
 //use of get_match_counts.
 int get_match_count(unsigned * values, size_t nvalues, int ifrom){
-  int i = ifrom+i;
+  int i = ifrom + 1;
   int count = 1;
 
   while (i<nvalues && values[i] == values[ifrom]){
