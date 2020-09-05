@@ -1,4 +1,4 @@
-Grading at Mon Jun 22 14:47:27 UTC 2020
+Grading at Sat Sep  5 17:18:53 UTC 2020
 Running 'make clean' to do a clean build of your project
 rm -rf *.o poker *~
 Running 'make poker OTHERFLAGS=-O3' to build your project
@@ -29,30 +29,20 @@ Running a simulation with 25000 draws for 2 hands...
     Hand 1 was close enough to our answer
     Test case passed!    
 Running a simulation with 80000 draws for 4 hands...
-Valgrind reported errors:
-==405== Memcheck, a memory error detector
-==405== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==405== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==405== Command: ./poker inp3.txt 80000
-==405== Parent PID: 404
-==405== 
+    Hand 0 was close enough to our answer
+    Hand 1 was close enough to our answer
+    Hand 2 was close enough to our answer
+    Hand 3 was close enough to our answer
+    Test case passed!    
 Running a simulation with 30000 draws for 2 hands...
-Valgrind reported errors:
-==410== Memcheck, a memory error detector
-==410== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==410== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==410== Command: ./poker inp.txt 30000
-==410== Parent PID: 409
-==410== 
+    Hand 0 was close enough to our answer
+    Hand 1 was close enough to our answer
+    Test case passed!    
  - Next, few Seven Card Stud hands
 Running a simulation with 30000 draws for 2 hands...
-Valgrind reported errors:
-==415== Memcheck, a memory error detector
-==415== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==415== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==415== Command: ./poker inp.txt 30000
-==415== Parent PID: 414
-==415== 
+    Hand 0 was close enough to our answer
+    Hand 1 was close enough to our answer
+    Test case passed!    
 Running a simulation with 40000 draws for 3 hands...
 Could not find the win percent in your output
 Could not find the win percent in your output
@@ -61,12 +51,12 @@ You dont seem to have the right total draws.
 Yours sum to 0 but I expected 40000
  - Then one from a completely made up poker variant
 Running a simulation with 100000 draws for 6 hands...
-Valgrind reported errors:
-==473== Memcheck, a memory error detector
-==473== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==473== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==473== Command: ./poker whacky.txt 100000
-==473== Parent PID: 472
-==473== 
+    Hand 0 was close enough to our answer
+    Hand 1 was close enough to our answer
+    Hand 2 was close enough to our answer
+    Hand 3 was close enough to our answer
+    Hand 4 was close enough to our answer
+    Hand 5 was close enough to our answer
+    Test case passed!    
 
-Overall Grade: F
+Overall Grade: B
