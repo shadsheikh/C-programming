@@ -41,6 +41,7 @@ suit_t flush_suit(deck_t * hand) {
 		return NUM_SUITS;
     
 }
+
 unsigned get_largest_element(unsigned * arr, size_t n) {
   unsigned largest=0;
   for (int i=0 ;i<n ;i++){
@@ -72,7 +73,7 @@ ssize_t  find_secondary_pair(deck_t * hand,
   
   return -1;
 }
-/*
+
 int is_n_length_straight_at(deck_t * hand, size_t index, suit_t fs, int n){
   int count =1;
   if (fs ==NUM_SUITS ) {
@@ -115,8 +116,8 @@ int is_n_length_straight_at(deck_t * hand, size_t index, suit_t fs, int n){
     if (is_ace_low_straight_at(hand, index,fs)) return -1;
     return is_n_length_straight_at(hand, index, fs, 5);
   }
-*/
 
+/*
 int is_n_length_straight_at(deck_t * hand, size_t index, suit_t fs, int n){
   int num_in_a_row = 0;
   unsigned last_value = hand->cards[index]->value+1;
@@ -191,7 +192,7 @@ int is_ace_low_straight_at(deck_t * hand, size_t index, suit_t fs,int n){
     }
     return 0;
   }
-
+*/
 hand_eval_t build_hand_from_match(deck_t * hand,
 				  unsigned n,
 				  hand_ranking_t what,
