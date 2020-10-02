@@ -1,4 +1,4 @@
-Grading at Thu Oct  1 17:04:54 UTC 2020
+Grading at Fri Oct  2 05:36:03 UTC 2020
 Running 'make clean' to do a clean build of your project
 rm -rf *.o poker *~
 Running 'make poker OTHERFLAGS=-O3' to build your project
@@ -44,11 +44,10 @@ Running a simulation with 30000 draws for 2 hands...
     Hand 1 was close enough to our answer
     Test case passed!    
 Running a simulation with 40000 draws for 3 hands...
-Could not find the win percent in your output
-Could not find the win percent in your output
-Could not find the win percent in your output
-You dont seem to have the right total draws.
-Yours sum to 0 but I expected 40000
+    Hand 0 was close enough to our answer
+    Hand 1 was close enough to our answer
+    Hand 2 was close enough to our answer
+    Test case passed!    
  - Then one from a completely made up poker variant
 Running a simulation with 100000 draws for 6 hands...
     Hand 0 was close enough to our answer
@@ -59,4 +58,4 @@ Running a simulation with 100000 draws for 6 hands...
     Hand 5 was close enough to our answer
     Test case passed!    
 
-Overall Grade: B
+Overall Grade: A
